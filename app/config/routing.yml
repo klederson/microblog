@@ -1,0 +1,7 @@
+homepage:
+    path: /
+    defaults: { _controller: BlogBundle:Index:index }
+
+post:
+    path: /post
+    defaults: { _controller: BlogBundle:Index:post }

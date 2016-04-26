@@ -1,0 +1,13 @@
+framework:
+    secret: %secret%
+    router:
+        resource: %kernel.root_dir%/config/routing.yml
+    templating:
+        engines: [twig]
+    profiler:
+        enabled: %kernel.debug%
+
+# enable routes inside bundle
+#twig:
+#    paths:
+#        "%kernel.root_dir%/../src/BlogBundle/Resources/views/": Blog

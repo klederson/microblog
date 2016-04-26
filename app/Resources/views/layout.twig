@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}Micro Blog{% endblock %}</title>
+
+    {% block css %}
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <style>
+        ul.logo li.menu-text a {
+            padding: 0;
+            color: #000;
+        }
+    </style>
+    {% endblock %}
+</head>
+<body>
+
+{% include 'layout/top-bar.twig' %}
+{% include 'layout/headline.twig' %}
+
+<div class="row" id="content">
+    <div class="medium-8 columns">
+
+        {% block body %}
+
+            {% for i in range(1, 2) %}
+                {% include 'layout/blog-post.twig' %}
+            {% endfor %}
+
+        {% endblock %}
+
+    </div>
+    <div class="medium-3 columns" data-sticky-container>
+        <div class="sticky" data-sticky data-anchor="content">
+            {% include 'layout/sidebar.twig' %}
+        </div>
+    </div>
+</div>
+
+{#{% if app.request.get('_route') == 'homepage' %}#}
+{# Good to know I can get current page's route like this #}
+{#{% endif %}#}
+
+{% block pagination %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block js %}
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+$(document).foundation();
+</script>
+{% endblock %}
+</body>
+</html>
