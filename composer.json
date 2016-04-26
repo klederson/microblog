@@ -1,6 +1,12 @@
 {
-    "name": "root/marius.local",
+    "name": "klederson/microblog",
+    "description": "A simple markdown php command line blog system for enthusiastic and nerd people ( usually developers )",
+    "keywords": ["microblog", "micro", "blog", "php"],
+    "homepage": "http://www.example.com",
+    "type": "library",
+    "license": "MIT",
     "require": {
+        "php": ">=5.5.9",
         "symfony/symfony": "~2.8",
         "sensio/framework-extra-bundle": "^3.0",
         "vlucas/phpdotenv": "^2.0",
@@ -14,6 +20,10 @@
         {
             "name": "Marius Bogdan Rizac",
             "email": "mariusbogdna83@gmail.com"
+        },
+        {
+            "name": "Klederson Bueno",
+            "email": "klederson@klederson.com"
         }
     ],
     "autoload": {
