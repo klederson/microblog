@@ -18,3 +18,5 @@ If you want to enable debug seetings, update `.env` file as follows:
 SYMFONY_ENV = dev
 SYMFONY_DEBUG = 1
 ```
+
+Alternatively you may use our [Symfony Vagrant VM](https://github.com/kisphp/symfony-vagrant) to run the blog in develop mode.
