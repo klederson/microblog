@@ -28,4 +28,4 @@ SYMFONY_ENV = dev
 SYMFONY_DEBUG = 1
 ```
 
-Alternatively you may use our [Symfony Vagrant VM](https://github.com/kisphp/symfony-vagrant) to run the blog in develop mode.
+Alternatively you may use our [Symfony Vagrant VM](https://github.com/kisphp/symfony-vagrant) to run the blog on local environment.
