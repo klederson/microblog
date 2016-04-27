@@ -7,14 +7,14 @@
     "license": "MIT",
     "require": {
         "php": ">=5.5.9",
-        "symfony/symfony": "~2.8",
+        "symfony/symfony": "~3.0",
         "sensio/framework-extra-bundle": "^3.0",
         "vlucas/phpdotenv": "^2.0",
         "kisphp/markdown-parser": "~0.3|~1.0"
     },
     "require-dev": {
-        "fabpot/php-cs-fixer": "1.9.*",
-        "symfony/var-dumper": "3.0.*"
+        "fabpot/php-cs-fixer": "~1.9",
+        "symfony/var-dumper": "~3.0"
     },
     "authors": [
         {
@@ -27,6 +27,11 @@
         }
     ],
     "autoload": {
-        "psr-4": { "": "src" }
+        "psr-4": {
+            "": "src"
+        },
+        "classmap": [
+            "app/AppKernel.php"
+        ]
     }
 }
