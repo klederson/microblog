@@ -19,7 +19,12 @@ cp .env.dist .env
 
 # install aditional packages
 composer install
+
+# install symfony assets
+php app/console assets:install
 ```
+
+> If you want to add bundle specific assets, create directory `Resources/public` in your bundle and add there `css`, `images`, `js` directories, etc.
 
 If you want to enable debug seetings, update `.env` file as follows:
 
@@ -29,3 +34,10 @@ SYMFONY_DEBUG = 1
 ```
 
 Alternatively you may use our [Symfony Vagrant VM](https://github.com/kisphp/symfony-vagrant) to run the blog on local environment.
+
+# commands
+
+```bash
+# display registered routes
+php app/console debug:router
+```
