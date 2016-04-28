@@ -1,13 +1,14 @@
 framework:
-    secret: %secret%
-    router:
-        resource: %kernel.root_dir%/config/routing.yml
-    templating:
-        engines: [twig]
-    profiler:
-        enabled: %kernel.debug%
+  secret: %secret%
+  translator: { fallbacks: ["%locale%"] }
 
-# enable routes inside bundle
-#twig:
-#    paths:
-#        "%kernel.root_dir%/../src/BlogBundle/Resources/views/": Blog
+  router:
+    resource: "%kernel.root_dir%/config/routing.yml"
+
+  templating:
+    engines: ['twig']
+
+  default_locale: %locale%
+
+twig:
+  strict_variables: true

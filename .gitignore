@@ -6,3 +6,7 @@ cache/
 nginx*
 _vm/
 web/bundles/
+bower/
+node_modules/
+web/js
+web/css
