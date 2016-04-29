@@ -1,0 +1,9 @@
+{
+  "name": "Comunicate de afaceri",
+  "homepage": "http://www.kisphp.com",
+  "private": false,
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "sweetalert": "^1.1.3"
+  }
+}

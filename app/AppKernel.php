@@ -18,7 +18,7 @@ class AppKernel extends Kernel
             new \BlogBundle\BlogBundle(),
         ];
 
-        if ($this->getEnvironment() === 'dev') {
+        if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
             $bundles[] = new \Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
         }
 
@@ -30,21 +30,6 @@ class AppKernel extends Kernel
      */
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__ . '/config/config.yml');
-
-        $isDevEnv = $this->getEnvironment() === 'dev';
-
-        $loader->load(function(ContainerBuilder $container) use ($isDevEnv) {
-            if ($isDevEnv === true) {
-                $container->loadFromExtension('web_profiler', [
-                    'toolbar' => true,
-                ]);
-                $container->loadFromExtension('framework', [
-                    'router' => [
-                        'resource' => '%kernel.root_dir%/config/routing_dev.yml'
-                    ]
-                ]);
-            }
-        });
+        $loader->load($this->getRootDir() . '/config/config_' . $this->getEnvironment() . '.yml');
     }
 }
