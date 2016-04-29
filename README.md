@@ -31,6 +31,8 @@ A simple markdown php command line blog system for enthusiastic and nerd people 
 ./buidl.sh -r
 ```
 
+> Run `php -S localhost:8000 -t web` to run internal php server and then go to [http://localhost:8000](http://localhost:8000)
+
 # Manual Installation
 
 ```bash
