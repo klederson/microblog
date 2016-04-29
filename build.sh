@@ -53,6 +53,21 @@ function writeErrorMessage {
 # INSTALLATION START
 #
 
+if [[ `echo "$@" | grep '\-r'` ]]; then
+    labelText "remove bower directory"
+    rm -rf ./bower
+    labelText "remove node_modules directory"
+    rm -rf ./node_modules
+    labelText "remove vendor directory"
+    rm -rf ./vendor
+    labelText "remove web/bundles directory"
+    rm -rf ./web/bundles
+    labelText "remove web/css directory"
+    rm -rf ./web/css
+    labelText "remove web/js directory"
+    rm -rf ./web/js
+fi
+
 if [[ ! -f ./.env ]];then
     infoText "Create .env file on first run"
     cp .env.dist .env

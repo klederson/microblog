@@ -4,7 +4,6 @@
   "private": false,
   "dependencies": {
     "jquery": "^2.2.3",
-    "foundation": "^5.5.3",
     "sweetalert": "^1.1.3"
   }
 }

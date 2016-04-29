@@ -8,12 +8,13 @@ var uglify = require('gulp-uglify');
 var browserify = require('gulp-browserify');
 
 var sourceBower = 'bower/';
+var sourceNodeModules = 'node_modules/';
 var sourceDir = 'app/gulp/web/';
 var sourceJsDir = sourceDir + 'js/';
 
 gulp.task('css-external', function(){
     return gulp.src([
-        sourceBower + 'foundation/css/foundation.min.css',
+        sourceNodeModules+ 'foundation-sites/dist/foundation.min.css',
         sourceBower + 'fontawesome/css/font-awesome.min.css',
         sourceBower + 'sweetalert/dist/sweetalert.css'
     ])
@@ -51,7 +52,7 @@ gulp.task('copy-files', ['copy-fonts'], function(){
 gulp.task('js-external', function(){
     return gulp.src([
         sourceBower + 'jquery/dist/jquery.min.js',
-        sourceBower + 'foundation/js/foundation.min.js',
+        sourceNodeModules + 'foundation-sites/dist/foundation.min.js',
         sourceBower + 'sweetalert/dist/sweetalert.min.js'
     ])
         .pipe(strip())

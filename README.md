@@ -21,6 +21,14 @@ A simple markdown php command line blog system for enthusiastic and nerd people 
 
 # or in production
 ./build.sh
+
+# If you want to reinitialize project required repositories and asstes run next command:
+
+# development
+./build.sh dev -r
+
+# production
+./buidl.sh -r
 ```
 
 # Manual Installation

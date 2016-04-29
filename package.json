@@ -15,7 +15,7 @@
   "author": "Marius",
   "license": "ISC",
   "dependencies": {
-    "foundation-sites": "^6.2.0",
+    "foundation-sites": "^6.2.1",
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
     "gulp-clean": "^0.3.1",
