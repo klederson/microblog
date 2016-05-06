@@ -3,5 +3,5 @@ homepage:
     defaults: { _controller: BlogBundle:Index:index }
 
 post:
-    path: /post
+    path: /{seo_title}
     defaults: { _controller: BlogBundle:Index:post }

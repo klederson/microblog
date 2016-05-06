@@ -8,8 +8,12 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
+        $articles = $this->get('articles_service')
+            ->getArticlesList()
+        ;
+
         return $this->render('blog/index.twig', [
-            'quote' => 'Here I am',
+            'articles' => $articles,
         ]);
     }
 

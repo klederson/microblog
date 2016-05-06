@@ -1,0 +1,3 @@
+services:
+  articles_service:
+    class: BlogBundle\Services\ArticlesService
