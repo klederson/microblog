@@ -12,3 +12,8 @@
 .desp-10 { @include desp(10px); }
 .desp-15 { @include desp(15px); }
 .desp-20 { @include desp(20px); }
+
+ul.logo li.menu-text a {
+  padding: 0;
+  color: #000;
+}
