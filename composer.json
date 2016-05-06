@@ -13,8 +13,7 @@
         "kisphp/markdown-parser": "~0.3|~1.0"
     },
     "require-dev": {
-        "fabpot/php-cs-fixer": "~1.9",
-        "symfony/var-dumper": "~3.0"
+        "fabpot/php-cs-fixer": "~1.9"
     },
     "authors": [
         {

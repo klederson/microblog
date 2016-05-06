@@ -15,6 +15,7 @@
   "author": "Marius",
   "license": "ISC",
   "dependencies": {
+    "browserify-shim": "^3.8.12",
     "foundation-sites": "^6.2.1",
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
@@ -26,5 +27,18 @@
     "gulp-strip-comments": "^2.3.2",
     "gulp-uglify": "^1.5.3",
     "jquery": "^2.2.3"
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "foundation": "./node_modules/foundation-sites/js/foundation.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "foundation": "foundation"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
   }
 }

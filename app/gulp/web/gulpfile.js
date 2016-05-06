@@ -49,20 +49,7 @@ gulp.task('copy-files', ['copy-fonts'], function(){
     //    .pipe(gulp.dest('web/css/responsive'));
 });
 
-gulp.task('js-external', function(){
-    return gulp.src([
-        sourceBower + 'jquery/dist/jquery.min.js',
-        sourceNodeModules + 'foundation-sites/dist/foundation.min.js',
-        sourceBower + 'sweetalert/dist/sweetalert.min.js'
-    ])
-        .pipe(strip())
-        .pipe(uglify())
-        .pipe(concat('external.js'))
-        .pipe(gulp.dest('web/js/'))
-    ;
-});
-
-gulp.task('js', ['js-external'], function(){
+gulp.task('js', function(){
     return gulp.src([
         sourceJsDir + 'app.js'
     ])

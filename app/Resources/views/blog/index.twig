@@ -1,7 +1,9 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-    {{ parent() }}
+    {% for art in articles %}
+        {% include 'layout/blog-post.twig' %}
+    {% endfor %}
 {% endblock %}
 
 {% block pagination %}
