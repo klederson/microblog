@@ -46,6 +46,7 @@ class ArticlesService
 
     /**
      * @param SplFileInfo $fileInfo
+     *
      * @return string
      */
     protected function getTruncatedContent(SplFileInfo $fileInfo)
@@ -64,6 +65,7 @@ class ArticlesService
 
     /**
      * @param $content
+     *
      * @return mixed
      */
     protected function cleanupNewLines($content)
@@ -94,6 +96,7 @@ class ArticlesService
 
     /**
      * @param $seoTitle
+     *
      * @return array
      */
     public function getArticlesBySeoTitle($seoTitle)

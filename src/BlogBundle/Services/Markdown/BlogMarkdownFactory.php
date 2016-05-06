@@ -6,5 +6,4 @@ use Kisphp\MarkdownFactory;
 
 class BlogMarkdownFactory extends MarkdownFactory
 {
-
 }
