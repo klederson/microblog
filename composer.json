@@ -14,7 +14,7 @@
     },
     "require-dev": {
         "fabpot/php-cs-fixer": "~1.9",
-        "symfony/var-dumper": "~3.0"
+        "symfony/var-dumper": "^3.0"
     },
     "authors": [
         {

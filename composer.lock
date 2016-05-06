@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4f2704afd20404385fccbe48592a6ec5",
-    "content-hash": "096d2ef0d4999f9577a9df131294d7c3",
+    "hash": "51c0b5fee2adb95419663014b3ecf37a",
+    "content-hash": "90fe1cd1bcdc6e8669fd3153fc15b8e9",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -407,16 +407,16 @@
         },
         {
             "name": "kisphp/markdown-parser",
-            "version": "0.3.1",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kisphp/markdown-parser.git",
-                "reference": "3d605e0ea6906c06f32b5ff990928d5479ca963a"
+                "reference": "f38d9f0ed83c0b705c9bce284f8ecc4a4b8203fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kisphp/markdown-parser/zipball/3d605e0ea6906c06f32b5ff990928d5479ca963a",
-                "reference": "3d605e0ea6906c06f32b5ff990928d5479ca963a",
+                "url": "https://api.github.com/repos/kisphp/markdown-parser/zipball/f38d9f0ed83c0b705c9bce284f8ecc4a4b8203fd",
+                "reference": "f38d9f0ed83c0b705c9bce284f8ecc4a4b8203fd",
                 "shasum": ""
             },
             "require": {
@@ -444,14 +444,14 @@
                     "homepage": "http://www.kisphp.com"
                 }
             ],
-            "description": "Kisphp Markdown parser. Highly extendable and customizable markdown parser",
+            "description": "Kisphp Markdown parser. Highly extensible and customizable markdown parser",
             "homepage": "http://www.kisphp.com",
             "keywords": [
                 "kisphp",
                 "markdown",
                 "parser"
             ],
-            "time": "2016-04-27 05:55:09"
+            "time": "2016-05-05 14:02:15"
         },
         {
             "name": "paragonie/random_compat",
@@ -887,16 +887,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.0.4",
+            "version": "v3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "4e17cb2ecb3fd637097ebeb871fc0e2cbdd5e7ff"
+                "reference": "10c83b58fbb42be516377de54962a758695ad964"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/4e17cb2ecb3fd637097ebeb871fc0e2cbdd5e7ff",
-                "reference": "4e17cb2ecb3fd637097ebeb871fc0e2cbdd5e7ff",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/10c83b58fbb42be516377de54962a758695ad964",
+                "reference": "10c83b58fbb42be516377de54962a758695ad964",
                 "shasum": ""
             },
             "require": {
@@ -979,7 +979,11 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Symfony\\Bridge\\": "src/Symfony/Bridge/",
+                    "Symfony\\Bridge\\Doctrine\\": "src/Symfony/Bridge/Doctrine/",
+                    "Symfony\\Bridge\\Monolog\\": "src/Symfony/Bridge/Monolog/",
+                    "Symfony\\Bridge\\ProxyManager\\": "src/Symfony/Bridge/ProxyManager/",
+                    "Symfony\\Bridge\\Swiftmailer\\": "src/Symfony/Bridge/Swiftmailer/",
+                    "Symfony\\Bridge\\Twig\\": "src/Symfony/Bridge/Twig/",
                     "Symfony\\Bundle\\": "src/Symfony/Bundle/",
                     "Symfony\\Component\\": "src/Symfony/Component/"
                 },
@@ -1009,7 +1013,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-03-30 10:41:14"
+            "time": "2016-05-03 05:58:56"
         },
         {
             "name": "twig/twig",
