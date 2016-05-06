@@ -2,6 +2,16 @@
 
 {% block body %}
 
-    {% include 'layout/blog-post.twig' %}
+    <div class="blog-post">
+        {#<h3>{{ art.title | default('') }} <small>{{ art.registered }}</small></h3>#}
+        {#<img class="thumbnail" src="http://placehold.it/850x350">#}
+        {{ art.content | raw }}
+        <div class="callout">
+            <ul class="menu simple">
+                <li><a href="#">Author: Mike Mikers</a></li>
+                <li><a href="#">Comments: 3</a></li>
+            </ul>
+        </div>
+    </div>
 
 {% endblock %}

@@ -2,12 +2,23 @@
 
 namespace BlogBundle\Services;
 
+use BlogBundle\Services\Markdown\BlogMarkdownFactory;
+use Kisphp\Markdown;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
+use Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException;
 
 class ArticlesService
 {
+    /**
+     * @var Markdown
+     */
     protected $markdown;
+
+    public function __construct()
+    {
+        $this->markdown = BlogMarkdownFactory::createMarkdown();
+    }
 
     /**
      * @return array
@@ -17,7 +28,7 @@ class ArticlesService
         $finder = new Finder();
         $finder->files()
             ->name('*.md')
-            ->in(__DIR__ . '/../Resources/data/')
+            ->in($this->getMdFilesLocation())
         ;
 
         $articles = [];
@@ -33,6 +44,11 @@ class ArticlesService
         return $articles;
     }
 
+    protected function getMdFilesLocation()
+    {
+        return __DIR__ . '/../Resources/data/';
+    }
+
     /**
      * @param SplFileInfo $fileInfo
      *
@@ -45,5 +61,22 @@ class ArticlesService
 
 
         return $text;
+    }
+
+    public function getArticlesBySeoTitle($seoTitle)
+    {
+        $file = $this->getMdFilesLocation() . $seoTitle . '.md';
+
+        if (!is_file($file)) {
+            throw new FileNotFoundException();
+        }
+
+        $fileInfo = new \SplFileObject($file, 'r');
+
+        return [
+            'title' => $seoTitle,
+            'registered' => $fileInfo->getMTime(),
+            'content' => $this->markdown->parse(file_get_contents($fileInfo->getRealPath())),
+        ];
     }
 }

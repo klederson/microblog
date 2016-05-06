@@ -17,10 +17,14 @@ class IndexController extends Controller
         ]);
     }
 
-    public function postAction()
+    public function postAction($seo_title)
     {
+        $article = $this->get('articles_service')
+            ->getArticlesBySeoTitle($seo_title)
+        ;
+
         return $this->render('blog/post.twig', [
-            'quote' => 'Here I have my post',
+            'art' => $article,
         ]);
     }
 }
